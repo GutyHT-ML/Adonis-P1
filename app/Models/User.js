@@ -7,6 +7,9 @@ const Model = use('Model')
 const Hash = use('Hash')
 
 class User extends Model {
+  posts(){
+    return this.hasMany('App/Models/Post')
+  }
   static boot () {
     super.boot()
 
